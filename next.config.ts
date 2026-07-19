@@ -1,8 +1,13 @@
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   output: "export",
   images: {
     unoptimized: true,
   },
+  basePath: "/privacy-policy",
+  assetPrefix: "/privacy-policy/",
+  trailingSlash: true,
 };
 
-module.exports = nextConfig;
+export default nextConfig;
