@@ -30,7 +30,7 @@ export default function PrivacySection({ section }: PrivacySectionProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-10% 0px -20% 0px" }}
       transition={{ duration: 0.5 }}
-      className="scroll-mt-24 py-10 first:pt-0 last:pb-0 border-b border-zinc-200/60 dark:border-zinc-800/60 last:border-b-0"
+      className="scroll-mt-24 py-10 first:pt-0 last:pb-0 border-b border-zinc-200/60 dark:border-zinc-800/60"
     >
       <div className="flex items-center gap-3 group mb-4">
         {getSectionIcon()}
@@ -38,7 +38,7 @@ export default function PrivacySection({ section }: PrivacySectionProps) {
           {section.title}
           <a
             href={`#${section.id}`}
-            className="opacity-0 group-hover:opacity-100 text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-300 transition-all focus:opacity-100"
+            className="opacity-0 group-hover:opacity-100 text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-300 transition-all"
             aria-label={`Link to section ${section.title}`}
           >
             <LinkIcon className="h-4 w-4" />
@@ -56,7 +56,10 @@ export default function PrivacySection({ section }: PrivacySectionProps) {
       {section.paragraphs && section.paragraphs.length > 0 && (
         <div className="space-y-4 mb-6">
           {section.paragraphs.map((p, idx) => (
-            <p key={idx} className="text-zinc-600 dark:text-zinc-400 text-sm sm:text-base leading-relaxed">
+            <p
+              key={idx}
+              className="text-zinc-600 dark:text-zinc-400 text-sm sm:text-base leading-relaxed"
+            >
               {p}
             </p>
           ))}
@@ -116,7 +119,6 @@ export default function PrivacySection({ section }: PrivacySectionProps) {
       {section.contactDetails && (
         <ContactCard
           email={section.contactDetails.email}
-          website={section.contactDetails.website}
           address={section.contactDetails.address}
         />
       )}

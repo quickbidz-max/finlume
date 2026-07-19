@@ -6,7 +6,11 @@ interface PermissionCardProps {
   iconName: string;
 }
 
-export default function PermissionCard({ title, description, iconName }: PermissionCardProps) {
+export default function PermissionCard({
+  title,
+  description,
+  iconName,
+}: PermissionCardProps) {
   return (
     <div className="flex gap-4 p-5 rounded-2xl border border-zinc-200 bg-white shadow-xs transition-all duration-300 hover:shadow-md hover:border-zinc-300 dark:border-zinc-850 dark:bg-zinc-900/40 dark:hover:border-zinc-750">
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zinc-50 border border-zinc-150 text-zinc-700 dark:bg-zinc-800/80 dark:border-zinc-700/50 dark:text-zinc-300">

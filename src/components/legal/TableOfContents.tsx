@@ -10,7 +10,6 @@ export default function TableOfContents() {
 
   useEffect(() => {
     const handleIntersect = (entries: IntersectionObserverEntry[]) => {
-      // Find the first visible section in the viewport
       const visible = entries.find((entry) => entry.isIntersecting);
       if (visible) {
         setActiveId(visible.target.id);
@@ -18,7 +17,7 @@ export default function TableOfContents() {
     };
 
     observerRef.current = new IntersectionObserver(handleIntersect, {
-      rootMargin: "-20% 0px -60% 0px", // triggers when section is in upper-mid viewport
+      rootMargin: "-20% 0px -60% 0px",
       threshold: 0.1,
     });
 
@@ -36,7 +35,7 @@ export default function TableOfContents() {
     e.preventDefault();
     const el = document.getElementById(id);
     if (el) {
-      const offset = 90; // account for headers
+      const offset = 90;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = el.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -46,16 +45,15 @@ export default function TableOfContents() {
         top: offsetPosition,
         behavior: "smooth",
       });
-      
-      // Update history hash without jarring jumps
+
       window.history.pushState(null, "", `#${id}`);
       setActiveId(id);
     }
   };
 
   return (
-    <nav 
-      aria-label="Table of contents" 
+    <nav
+      aria-label="Table of contents"
       className="hidden lg:block sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pr-6"
     >
       <h2 className="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-4 px-3">
@@ -66,9 +64,8 @@ export default function TableOfContents() {
           const isActive = activeId === section.id;
           return (
             <li key={section.id} className="relative group">
-              {/* Active Indicator Bar */}
               {isActive && (
-                <div className="absolute left-[-1px] top-0 bottom-0 w-[2px] bg-zinc-900 dark:bg-zinc-100 transition-all duration-300" />
+                <div className="absolute -left-px top-0 bottom-0 w-[2px] bg-zinc-900 dark:bg-zinc-100 transition-all duration-300" />
               )}
               <a
                 href={`#${section.id}`}
@@ -77,7 +74,7 @@ export default function TableOfContents() {
                   "block py-2 px-4 text-sm font-medium transition-all duration-200 focus:outline-none focus:text-zinc-950 dark:focus:text-white rounded-r-md",
                   isActive
                     ? "text-zinc-950 dark:text-white font-semibold"
-                    : "text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+                    : "text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200",
                 )}
                 aria-current={isActive ? "location" : undefined}
               >

@@ -22,7 +22,7 @@ export default function InfoCard({ title, description, items }: InfoCardProps) {
           {items.map((item, idx) => (
             <li key={idx} className="flex items-start gap-3 text-sm text-zinc-650 dark:text-zinc-350">
               <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-400">
-                <Check className="h-2.5 w-2.5 stroke-[3]" />
+                <Check className="h-2.5 w-2.5 stroke-3" />
               </span>
               <span className="leading-tight">{item}</span>
             </li>

@@ -22,7 +22,6 @@ export interface PolicySection {
   notice?: string;
   contactDetails?: {
     email: string;
-    website: string;
     address: string;
   };
 }
@@ -33,7 +32,6 @@ export const PRIVACY_METADATA = {
   emailSupport: "support@finlume.com",
   termsUrl: "/terms-conditions",
   contactUrl: "/contact",
-  websiteUrl: "https://finlume.com",
   addressPlaceholder: "Finlume Inc., 100 Pine Street, Suite 1250, San Francisco, CA 94111 (Future Office)"
 };
 
@@ -354,7 +352,6 @@ export const PRIVACY_SECTIONS: PolicySection[] = [
     intro: "If you have any questions, feedback, complaints, or security concerns regarding this Privacy Policy or our data handling practices, please contact us:",
     contactDetails: {
       email: PRIVACY_METADATA.emailSupport,
-      website: PRIVACY_METADATA.websiteUrl,
       address: PRIVACY_METADATA.addressPlaceholder
     }
   }
