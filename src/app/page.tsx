@@ -426,21 +426,6 @@ export default function FeatureGuidePage() {
                 </li>
               </ul>
             </div>
-            <div>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-3">
-                Company
-              </h3>
-              <ul className="space-y-2 text-xs">
-                <li>
-                  <Link
-                    href={`mailto:support@finlume.com`}
-                    className="hover:text-zinc-900 dark:hover:text-white transition-colors"
-                  >
-                    Contact Support
-                  </Link>
-                </li>
-              </ul>
-            </div>
           </div>
           <div className="border-t border-zinc-200/60 dark:border-zinc-800/60 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
             <p>

@@ -172,14 +172,6 @@ export default function PrivacyPolicyPage() {
                 </li>
                 <li>
                   <Link
-                    href="/#pricing"
-                    className="hover:text-zinc-900 dark:hover:text-white transition-colors"
-                  >
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link
                     href="/security"
                     className="hover:text-zinc-900 dark:hover:text-white transition-colors"
                   >
@@ -199,53 +191,6 @@ export default function PrivacyPolicyPage() {
                     className="text-zinc-900 dark:text-white font-medium hover:underline"
                   >
                     Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/terms-conditions"
-                    className="hover:text-zinc-900 dark:hover:text-white transition-colors"
-                  >
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/cookies"
-                    className="hover:text-zinc-900 dark:hover:text-white transition-colors"
-                  >
-                    Cookie Settings
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-3">
-                Company
-              </h3>
-              <ul className="space-y-2 text-xs">
-                <li>
-                  <Link
-                    href="/about"
-                    className="hover:text-zinc-900 dark:hover:text-white transition-colors"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/careers"
-                    className="hover:text-zinc-900 dark:hover:text-white transition-colors"
-                  >
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="hover:text-zinc-900 dark:hover:text-white transition-colors"
-                  >
-                    Contact
                   </Link>
                 </li>
               </ul>
