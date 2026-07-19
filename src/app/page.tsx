@@ -335,7 +335,7 @@ export default function FeatureGuidePage() {
                 className="group flex flex-col p-6 sm:p-8 rounded-2xl border border-zinc-200 bg-white hover:border-zinc-300 dark:border-zinc-850 dark:bg-zinc-900/40 dark:hover:border-zinc-750 transition-all duration-300 shadow-2xs hover:shadow-xs"
               >
                 <div className="flex items-center justify-between mb-5">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-zinc-50 border border-zinc-150 text-zinc-700 dark:bg-zinc-850 dark:border-zinc-750 dark:text-zinc-300 group-hover:bg-zinc-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-zinc-950 transition-all duration-300">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-zinc-50 border border-zinc-150 text-black">
                     <Icon className="h-5 w-5" />
                   </div>
                   <span

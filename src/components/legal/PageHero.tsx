@@ -56,14 +56,6 @@ export default function PageHero() {
               <Mail className="w-4 h-4" />
               Contact Support
             </Link>
-            <Link
-              href={PRIVACY_METADATA.termsUrl}
-              className="inline-flex items-center justify-center gap-2 h-11 px-5 rounded-lg border border-zinc-200/80 bg-white text-zinc-700 font-medium text-sm transition-all hover:bg-zinc-50 hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-950 focus:ring-offset-2 dark:border-zinc-800 dark:bg-zinc-900/50 dark:text-zinc-300 dark:hover:bg-zinc-900 dark:hover:text-white dark:focus:ring-zinc-300 shadow-sm"
-            >
-              <FileText className="w-4 h-4" />
-              Terms & Conditions
-              <ArrowRight className="w-4 h-4 ml-0.5 opacity-60" />
-            </Link>
           </div>
         </motion.div>
       </div>
