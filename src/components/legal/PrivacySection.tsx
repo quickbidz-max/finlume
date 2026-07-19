@@ -52,7 +52,6 @@ export default function PrivacySection({ section }: PrivacySectionProps) {
         </p>
       )}
 
-      {/* Main Paragraphs */}
       {section.paragraphs && section.paragraphs.length > 0 && (
         <div className="space-y-4 mb-6">
           {section.paragraphs.map((p, idx) => (
@@ -66,7 +65,6 @@ export default function PrivacySection({ section }: PrivacySectionProps) {
         </div>
       )}
 
-      {/* Conditional Sub-lists/Sub-sections (e.g., Info types) */}
       {section.subsections && section.subsections.length > 0 && (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 mb-6">
           {section.subsections.map((sub, idx) => (
@@ -80,11 +78,9 @@ export default function PrivacySection({ section }: PrivacySectionProps) {
         </div>
       )}
 
-      {/* Conditional Grid Cards (e.g. Device Permissions, How We Use, Security) */}
       {section.cards && section.cards.length > 0 && (
         <div className="grid gap-4 sm:grid-cols-2 mb-6">
           {section.cards.map((card, idx) => {
-            // Check context of parent section to render correct visual style
             if (section.id === "security") {
               return (
                 <SecurityCard
@@ -95,7 +91,6 @@ export default function PrivacySection({ section }: PrivacySectionProps) {
                 />
               );
             }
-            // Standard card rendering for device permissions & use-cases
             return (
               <PermissionCard
                 key={idx}
@@ -108,19 +103,14 @@ export default function PrivacySection({ section }: PrivacySectionProps) {
         </div>
       )}
 
-      {/* Strict Legal Notice Alert Banner */}
       {section.notice && (
         <div className="mb-6">
           <LegalNotice message={section.notice} />
         </div>
       )}
 
-      {/* Contact Grid details */}
       {section.contactDetails && (
-        <ContactCard
-          email={section.contactDetails.email}
-          address={section.contactDetails.address}
-        />
+        <ContactCard email={section.contactDetails.email} />
       )}
     </motion.section>
   );
