@@ -28,7 +28,7 @@ export interface PolicySection {
 export const PRIVACY_METADATA = {
   lastUpdated: "July 19, 2026",
   effectiveDate: "July 19, 2026",
-  emailSupport: "support@finlume.com",
+  emailSupport: "support@moneyutility.com",
   termsUrl: "/terms-conditions",
   contactUrl: "/contact",
 };
