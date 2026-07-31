@@ -22,6 +22,7 @@ import {
   FileText,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface FeatureSpec {
   id: number;
@@ -205,9 +206,13 @@ export default function FeatureGuidePage() {
       <header className="sticky top-0 z-40 w-full border-b border-zinc-200/80 bg-white/80 backdrop-blur-md dark:border-zinc-800/80 dark:bg-zinc-950/80">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="h-7 w-7 rounded-lg bg-zinc-900 dark:bg-white flex items-center justify-center font-bold text-sm text-white dark:text-zinc-900 shadow-sm">
-              F
-            </div>
+            <Image
+              src="/icon.png"
+              alt="Finlume Logo"
+              width={28}
+              height={28}
+              className="h-7 w-7 rounded-lg object-contain"
+            />
             <span className="font-semibold text-lg text-zinc-900 dark:text-white tracking-tight">
               Finlume
             </span>
@@ -385,9 +390,13 @@ export default function FeatureGuidePage() {
                 href="/"
                 className="flex items-center gap-2 mb-4 font-semibold text-zinc-900 dark:text-white"
               >
-                <div className="h-6 w-6 rounded bg-zinc-900 dark:bg-white flex items-center justify-center font-bold text-xs text-white dark:text-zinc-900">
-                  F
-                </div>
+                <Image
+                  src="/icon.png"
+                  alt="Finlume Logo"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 rounded-md object-contain"
+                />
                 Finlume
               </Link>
               <p className="text-xs text-zinc-550 dark:text-zinc-500 max-w-50 leading-relaxed">

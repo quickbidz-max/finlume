@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ShieldAlert,
@@ -154,9 +155,13 @@ export default function DeleteAccountPage() {
       <header className="sticky top-0 z-40 w-full border-b border-zinc-200/80 bg-white/80 backdrop-blur-md dark:border-zinc-800/80 dark:bg-zinc-950/80">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="h-7 w-7 rounded-lg bg-zinc-900 dark:bg-white flex items-center justify-center font-bold text-sm text-white dark:text-zinc-900 shadow-sm">
-              F
-            </div>
+            <Image
+              src="/icon.png"
+              alt="Finlume Logo"
+              width={28}
+              height={28}
+              className="h-7 w-7 rounded-lg object-contain"
+            />
             <span className="font-semibold text-lg text-zinc-900 dark:text-white tracking-tight">
               Finlume
             </span>

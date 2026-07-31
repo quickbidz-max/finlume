@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PRIVACY_SECTIONS } from "@/data/privacy-policy";
 import PageHero from "@/components/legal/PageHero";
 import TableOfContents from "@/components/legal/TableOfContents";
@@ -111,9 +112,13 @@ export default function PrivacyPolicyPage() {
             href="/"
             className="flex items-center gap-2.5 focus:outline-none focus:ring-2 focus:ring-zinc-950 focus:ring-offset-2 rounded-md dark:focus:ring-zinc-300 dark:focus:ring-offset-zinc-900"
           >
-            <div className="h-7 w-7 rounded-lg bg-zinc-900 dark:bg-white flex items-center justify-center font-bold text-sm text-white dark:text-zinc-900 shadow-sm">
-              F
-            </div>
+            <Image
+              src="/icon.png"
+              alt="Finlume Logo"
+              width={28}
+              height={28}
+              className="h-7 w-7 rounded-lg object-contain"
+            />
             <span className="font-semibold text-lg text-zinc-900 dark:text-white tracking-tight">
               Finlume
             </span>
@@ -162,9 +167,13 @@ export default function PrivacyPolicyPage() {
                 href="/"
                 className="flex items-center gap-2 mb-4 font-semibold text-zinc-900 dark:text-white"
               >
-                <div className="h-6 w-6 rounded bg-zinc-900 dark:bg-white flex items-center justify-center font-bold text-xs text-white dark:text-zinc-900">
-                  F
-                </div>
+                <Image
+                  src="/icon.png"
+                  alt="Finlume Logo"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 rounded-md object-contain"
+                />
                 Finlume
               </Link>
               <p className="text-xs text-zinc-500 dark:text-zinc-500 max-w-50 leading-relaxed">
