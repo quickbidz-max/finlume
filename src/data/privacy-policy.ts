@@ -165,7 +165,7 @@ export const PRIVACY_SECTIONS: PolicySection[] = [
       },
       {
         title: "Permanent Account Erasure",
-        description: "You can permanently delete your user profile and all associated data records via the \"Delete Account\" function in the Profile settings menu. This action permanently deletes your record from our Supabase authentication records and relational databases, with no backup retention."
+        description: "You can permanently delete your user profile and all associated data records at any time by logging into our Delete Account Portal (/delete-account) or via the \"Delete Account\" setting inside the App. This action permanently deletes your record from our Supabase authentication records and relational databases, with no backup retention."
       },
       {
         title: "Revoking Permissions",

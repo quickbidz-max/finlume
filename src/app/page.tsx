@@ -225,6 +225,12 @@ export default function FeatureGuidePage() {
             >
               Privacy Policy
             </Link>
+            <Link
+              href="/delete-account"
+              className="text-sm font-medium text-rose-600 hover:text-rose-700 dark:text-rose-400 dark:hover:text-rose-300 transition-colors"
+            >
+              Delete Account
+            </Link>
           </nav>
         </div>
       </header>
@@ -384,7 +390,7 @@ export default function FeatureGuidePage() {
                 </div>
                 Finlume
               </Link>
-              <p className="text-xs text-zinc-550 dark:text-zinc-500 max-w-[200px] leading-relaxed">
+              <p className="text-xs text-zinc-550 dark:text-zinc-500 max-w-50 leading-relaxed">
                 Smart financial tracking, budgeting, and automated rewards.
               </p>
             </div>
@@ -424,6 +430,14 @@ export default function FeatureGuidePage() {
                     Privacy Policy
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/delete-account"
+                    className="hover:text-rose-600 dark:hover:text-rose-400 transition-colors font-medium hover:underline"
+                  >
+                    Delete Account
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -437,6 +451,12 @@ export default function FeatureGuidePage() {
                 className="hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
               >
                 Privacy Policy
+              </Link>
+              <Link
+                href="/delete-account"
+                className="hover:text-rose-600 dark:hover:text-rose-400 transition-colors font-medium"
+              >
+                Delete Account
               </Link>
             </div>
           </div>
