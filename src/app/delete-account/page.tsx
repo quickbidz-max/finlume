@@ -70,7 +70,7 @@ export default function DeleteAccountPage() {
 
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
-        email,
+        email: email.trim(),
         password,
       });
 
@@ -255,14 +255,17 @@ export default function DeleteAccountPage() {
 
               <form onSubmit={handleLogin} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
+                  <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
                     Email Address
                   </label>
                   <div className="relative">
                     <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
                     <input
+                      id="email"
+                      name="email"
                       type="email"
                       required
+                      autoComplete="username email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="user@example.com"
@@ -272,14 +275,17 @@ export default function DeleteAccountPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
+                  <label htmlFor="password" className="block text-xs font-semibold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
                     Password
                   </label>
                   <div className="relative">
                     <Key className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" />
                     <input
+                      id="password"
+                      name="password"
                       type={showPassword ? "text" : "password"}
                       required
+                      autoComplete="current-password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="••••••••••••"
@@ -289,6 +295,7 @@ export default function DeleteAccountPage() {
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3.5 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200"
+                      aria-label={showPassword ? "Hide password" : "Show password"}
                     >
                       {showPassword ? (
                         <EyeOff className="w-4 h-4" />
@@ -434,11 +441,14 @@ export default function DeleteAccountPage() {
 
               <div className="space-y-4">
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
+                  <label htmlFor="deleteReason" className="block text-xs font-semibold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-2">
                     Why are you deleting your account? (Optional)
                   </label>
                   <input
+                    id="deleteReason"
+                    name="deleteReason"
                     type="text"
+                    autoComplete="off"
                     value={deleteReason}
                     onChange={(e) => setDeleteReason(e.target.value)}
                     placeholder="e.g. No longer needed, switching platforms..."
@@ -447,14 +457,17 @@ export default function DeleteAccountPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-rose-700 dark:text-rose-400 mb-2">
+                  <label htmlFor="confirmText" className="block text-xs font-semibold uppercase tracking-wider text-rose-700 dark:text-rose-400 mb-2">
                     Confirmation Requirement
                   </label>
                   <p className="text-xs text-zinc-500 mb-2">
                     To confirm permanent deletion, type <strong className="text-zinc-900 dark:text-white">DELETE</strong> in the box below:
                   </p>
                   <input
+                    id="confirmText"
+                    name="confirmText"
                     type="text"
+                    autoComplete="off"
                     value={confirmText}
                     onChange={(e) => setConfirmText(e.target.value)}
                     placeholder="Type DELETE to confirm"
